@@ -9,8 +9,7 @@ int main()
     {
         for(j=1;j<=i;j++)
         {
-            if((i-j)<=i)
-            {
+            
                 if((i+j)%2==0)
                 {
                     cout<<"1"<<" ";
@@ -19,7 +18,7 @@ int main()
                 {
                     cout<<"0"<<" ";
                 }
-            }
+            
         }
         cout<<endl;
     }
