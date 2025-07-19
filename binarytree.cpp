@@ -71,6 +71,41 @@ void postorder(node* root)
     cout<<root->data<<" ";
 }
 
+//dfs
+
+void dfs(node* root)
+{
+    queue<node*>q;
+    q.push(root);
+    q.push(NULL);// this help to print element level wise
+
+    while(!q.empty())
+    {
+        node* curr=q.front();
+        q.pop();
+        if(curr==NULL)// this help to print element level wise
+        {
+            if(!q.empty())
+            {
+                cout<<endl;
+                q.push(NULL);
+                continue;
+            }
+            else{
+                break;
+            }
+        }
+        cout<<curr->data<<" ";
+        if(curr->left!=NULL)
+        {
+            q.push(curr->left);
+        }
+        if(curr->right!=NULL)
+        {
+            q.push(curr->right);
+        }
+    }
+}
 
 int main()
 {
@@ -86,5 +121,7 @@ int main()
     cout<<endl;
     cout<<"postorder"<<endl;
     postorder(root);
+    cout<<endl;
+    dfs(root);
 
 }
