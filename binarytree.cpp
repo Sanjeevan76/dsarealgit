@@ -27,7 +27,9 @@ node* build_tree(vector<int> tree)
 
     node* root=new node(tree[idx]);
     root->left=build_tree(tree);
+    cout<<"left"<<endl;
     root->right=build_tree(tree);
+    cout<<"right---"<<endl;
 
     return root;
 }
